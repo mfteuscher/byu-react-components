@@ -1,10 +1,11 @@
-import { Children } from "react";
+import { Children, ReactNode } from "react";
 import Button from "../Button/Button";
 
-const getChildByName = (children, name) =>
+const getChildByName = (children: ReactNode, name: string) =>
+	// @ts-ignore
 	Children.map(children, child => (child.type.name === name ? child : null));
 
-function ContactInfo({ children }) {
+function ContactInfo({ children }: { children: ReactNode}) {
 	const title = getChildByName(children, "Title");
 	const address = getChildByName(children, "Address");
 	const email = getChildByName(children, "Email");
@@ -21,7 +22,7 @@ function ContactInfo({ children }) {
 	);
 }
 
-function Title({ children }) {
+function Title({ children }: { children: ReactNode}) {
 	return (
 		<div className="mb-3 font-headings text-sm font-extrabold uppercase tracking-widest">
 			{children}
@@ -30,17 +31,17 @@ function Title({ children }) {
 }
 ContactInfo.Title = Title;
 
-function Phone({ children }) {
+function Phone({ children }: { children: ReactNode}) {
 	return <a href={`tel:${children}`}>{children}</a>;
 }
 ContactInfo.Phone = Phone;
 
-function Email({ children }) {
+function Email({ children }: { children: ReactNode}) {
 	return <a href={`mailto:${children}`}>{children}</a>;
 }
 ContactInfo.Email = Email;
 
-function Address({ children }) {
+function Address({ children }: { children: ReactNode}) {
 	return <>{children}</>;
 }
 ContactInfo.Address = Address;
