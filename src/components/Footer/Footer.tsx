@@ -1,5 +1,5 @@
-import BYUWordMark from "../../assets/byu-wordmark-ring.svg";
-import BYUWhiteLogo from "../../assets/BYU monogram_white.svg";
+import BYUWordMark from '../../assets/SVG/BYU Logos/byu-wordmark-ring.svg';
+import BYUWhiteLogo from '../../assets/SVG/BYU Logos/BYU monogram_white.svg';
 import React from "react";
 
 interface FooterProps {
@@ -39,7 +39,7 @@ function UniversityFooter() {
 		<div className="flex justify-center bg-navy px-5 py-4 text-white md:px-10">
 			<div className="flex max-w-screen-lg grow flex-col items-center gap-4 md:gap-6 md:max-xl:flex-row">
 				<a className="flex-initial" href="https://www.byu.edu/">
-					<BYUWordMark className="hidden xl:block" />
+					<BYUWordMark className="hidden xl:block"/>
 					<BYUWhiteLogo className="block w-20 md:w-24 xl:hidden"/>
 				</a>
 				<div className="mx-auto flex-1 text-center">

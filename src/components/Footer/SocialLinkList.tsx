@@ -1,9 +1,9 @@
 import { Children, ReactNode, ReactElement } from "react";
-import FacebookLogo from "./f_logo_RGB-Blue_100.png";
-import TwitterLogo from "./Twitter social icons - rounded square - blue.svg?url";
-import InstagramLogo from "./Instagram_Glyph_Gradient_RGB.svg?url";
-import YouTubeLogo from "./yt_icon_rgb.png";
-import LinkedInLogo from "./LinkedInLogo.png";
+import FacebookLogo from "../../assets/PNG/Social Media Icons/FacebookLogo.png";
+import TwitterLogo from "../../assets/SVG/Icons/social/TwitterLogo.svg?url";
+import InstagramLogo from "../../assets/SVG/Icons/social/InstagramLogo.svg?url";
+import YouTubeLogo from "../../assets/PNG/Social Media Icons/YouTubeLogo.png";
+import LinkedInLogo from "../../assets/PNG/Social Media Icons/LinkedInLogo.png";
 
 
 const getChildByName = (children: ReactNode, name: string) =>

@@ -1,8 +1,8 @@
-import BYUWhiteLogo from "../../assets/BYU monogram_white.png";
-import ThreeLines from "./three-lines.svg?url";
-import AccountIcon from './account.svg'
-import CloseX from "./close-x.svg?url";
-import MagnifyingGlass from "./magnifying-glass.svg";
+import BYUWhiteLogo from "../../assets/SVG/BYU Logos/BYU monogram_white.svg?url";
+import ThreeLines from "../../assets/SVG/Icons/three-lines.svg?url";
+import AccountIcon from '../../assets/SVG/Icons/account.svg'
+import CloseX from "../../assets/SVG/Icons/close-x.svg?url";
+import MagnifyingGlass from "../../assets/SVG/Icons/magnifying-glass.svg";
 import Button from "../Button/Button";
 import "../../global.css";
 import { ReactNode, useState } from "react";
@@ -77,14 +77,14 @@ interface TextProps {
 }
 
 interface NavBarProps {
-	title: TextProps
-	subtitle: TextProps,
-	breadcrumbs: TextProps[],
-	nav: TextProps[],
-	active: string,
-	button: TextProps,
+	title?: TextProps
+	subtitle?: TextProps,
+	breadcrumbs?: TextProps[],
+	nav?: TextProps[],
+	active?: string,
+	button?: TextProps,
 	executeSearch?: (query: string) => void,
-	signInOptions: signInProps
+	signInOptions?: signInProps
 }
 
 export default function NavBar({

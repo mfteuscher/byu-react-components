@@ -1,6 +1,6 @@
 import { ReactElement, ReactNode, useState, Children } from "react";
 import "../../global.css";
-import Plus from './Plus.svg'
+import Plus from '../../assets/SVG/Icons/Plus.svg'
 
 interface AccordianListProps {
 	title?: string
