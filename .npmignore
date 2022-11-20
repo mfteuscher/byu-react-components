@@ -1,0 +1,8 @@
+node_modules
+stories
+README.md
+.storybook
+prettier.config.js
+.prettierrc.json
+postcss.config.js
+tailwind.config.js

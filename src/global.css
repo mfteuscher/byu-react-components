@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--navy: #002e5d;
+		--white: #ffffff;
+		--royal: #003da5;
+		--buttonColor: #0057b8;
+		--secondaryTextColor: #666666;
+		--dividerColor: #0f5499;
+	}
+	html {
+		font-family: "Public Sans", "Noto Sans", "Open Sans", Helvetica, Arial,
+			sans-serif;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial,
+			sans-serif;
+		color: var(--navy);
+	}
+	h1 {
+		font-size: 2.4em !important;
+		margin: 0 !important;
+		@apply font-bold;
+	}
+	h2 {
+		font-size: 2em;
+		@apply font-medium;
+	}
+	h3 {
+		@apply font-bold;
+		font-size: 1.3333em;
+	}
+	h4 {
+		@apply uppercase;
+		@apply font-bold;
+		font-size: 1.11111em;
+	}
+	h5 {
+		@apply text-base;
+		@apply font-medium;
+	}
+	h6 {
+		@apply font-light;
+		@apply text-base;
+		@apply italic;
+	}
+}
+
+@import url(https://cdn.byu.edu/theme-fonts/1.x.x/ringside/fonts.css);
+@import url(https://cdn.byu.edu/theme-fonts/1.x.x/public-sans/fonts.css);
