@@ -1,4 +1,5 @@
 // const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+// const path = require('path');
 
 module.exports = {
 	core: {
@@ -23,6 +24,11 @@ module.exports = {
 		},
 	],
 	framework: "@storybook/react",
+	/**
+	 * 
+	 * @param {webpack.Configuration} config 
+	 * @returns {webpack.Configuration}
+	 */
 	webpackFinal: async (config) => {
 
 		// config.resolve.plugins = [
@@ -66,6 +72,9 @@ module.exports = {
 			type: 'asset/resource',
 			generator: { filename: 'static/media/[path][name][ext]' }
 		});
+		
+		// TODO: Possibly make an alias for assets folder
+		// config.resolve.alias.assets = path.resolve(__dirname, '../src/assets');
 
 
 		return config;

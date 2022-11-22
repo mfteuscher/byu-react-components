@@ -1,6 +1,6 @@
-import BYUWhiteLogo from "../../assets/SVG/BYU Logos/BYU monogram_white.svg?url";
+import BYUWhiteLogo from '../../assets/SVG/BYU Logos/BYU monogram_white.svg';
 import ThreeLines from "../../assets/SVG/Icons/three-lines.svg?url";
-import AccountIcon from '../../assets/SVG/Icons/account.svg'
+import AccountIcon from '../../assets/SVG/Icons/account.svg';
 import CloseX from "../../assets/SVG/Icons/close-x.svg?url";
 import MagnifyingGlass from "../../assets/SVG/Icons/magnifying-glass.svg";
 import Button from "../Button/Button";
@@ -109,7 +109,7 @@ export default function NavBar({
 					className="flex h-full flex-initial items-center"
 				>
 					<a href="https://www.byu.edu/">
-						<img className="cursor-pointer" src={BYUWhiteLogo} width="100px" />
+						<BYUWhiteLogo width="100px"/>
 					</a>
 				</div>
 				{/* Blue Line Divider */}
