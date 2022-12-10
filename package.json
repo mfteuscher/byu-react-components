@@ -1,5 +1,5 @@
 {
-	"name": "byu-react-components",
+	"name": "@mfteuscher/byu-react-components",
 	"version": "0.0.1",
 	"description": "BYU UI components built in React",
 	"main": "./dist/index.js",
