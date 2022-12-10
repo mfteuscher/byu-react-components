@@ -15,6 +15,10 @@
 	},
 	"author": "Michael Teuscher",
 	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mfteuscher/byu-react-components.git"
+	},
 	"devDependencies": {
 		"@babel/core": "^7.19.6",
 		"@storybook/addon-actions": "^6.5.13",
