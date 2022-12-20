@@ -29,9 +29,9 @@ function SocialLinkList({ children }: SocialLinkListProps) {
 
   const title = getChildByName(children, "Title");
   return (
-    <div className="mb-10 mr-10 flex flex-col gap-2 sm:max-lg:basis-1/3">
+    <div className="byu-mb-10 byu-mr-10 byu-flex byu-flex-col byu-gap-2 sm:max-lg:byu-basis-1/3">
       {title}
-      <div className="flex flex-wrap">
+      <div className="byu-flex byu-flex-wrap">
         {subComponents.map(component => component)}
       </div>
     </div>
@@ -43,7 +43,7 @@ interface TitleProps {
 }
 function Title({ children }: TitleProps) {
   return (
-    <div className="mb-2 font-headings text-sm font-extrabold uppercase tracking-widest">
+    <div className="byu-mb-2 byu-font-headings byu-text-sm byu-font-extrabold byu-uppercase byu-tracking-widest">
       {children}
     </div>
   );
@@ -60,13 +60,13 @@ interface LinkProps {
 }
 
 function Link({ href, type, className, ...props }: LinkProps) {
-  let classNames = "mx-1";
+  let classNames = "byu-mx-1";
   let image = null;
   switch (type) {
     case "Facebook":
       image = (
         <img
-          className=" h-5 w-5 transition-all duration-200 hover:opacity-70 "
+          className=" byu-h-5 w-5 byu-transition-all byu-duration-200 hover:byu-opacity-70 "
           src={FacebookLogo}
         />
       );
@@ -74,7 +74,7 @@ function Link({ href, type, className, ...props }: LinkProps) {
     case "Twitter":
       image = (
         <img
-          className="h-5 w-5 transition-all duration-200 hover:opacity-70"
+          className="byu-h-5 byu-w-5 byu-transition-all byu-duration-200 hover:byu-opacity-70"
           src={TwitterLogo}
         />
       );
@@ -82,7 +82,7 @@ function Link({ href, type, className, ...props }: LinkProps) {
     case "Instagram":
       image = (
         <img
-          className="h-5 w-5 transition-all duration-200 hover:opacity-70"
+          className="byu-h-5 byu-w-5 byu-transition-all byu-duration-200 hover:byu-opacity-70"
           src={InstagramLogo}
         />
       );
@@ -90,7 +90,7 @@ function Link({ href, type, className, ...props }: LinkProps) {
     case "YouTube":
       image = (
         <img
-          className="mt-1 w-5 transition-all duration-200 hover:opacity-70"
+          className="byu-mt-1 byu-w-5 byu-transition-all byu-duration-200 hover:byu-opacity-70"
           src={YouTubeLogo}
         />
       );
@@ -98,7 +98,7 @@ function Link({ href, type, className, ...props }: LinkProps) {
     case "LinkedIn":
       image = (
         <img
-          className="h-5 w-5 transition-all duration-200 hover:opacity-70"
+          className="byu-h-5 byu-w-5 byu-transition-all byu-duration-200 hover:byu-opacity-70"
           src={LinkedInLogo}
         />
       );

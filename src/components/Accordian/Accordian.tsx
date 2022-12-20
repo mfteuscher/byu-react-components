@@ -16,7 +16,7 @@ export function AccordianList({ title, children }: AccordianListProps) {
 	return (
 		<div className="p-5">
 			{title && (
-				<div className="touch-none uppercase font-black text-sm md:text-lg tracking-widest font-headings">
+				<div className="byu-touch-none byu-uppercase byu-font-black byu-text-sm md:byu-text-lg byu-tracking-widest byu-font-headings">
 					{title}
 				</div>
 			)}
@@ -32,24 +32,24 @@ interface AccordianItemProps {
 export function AccordianItem({ title, children }: AccordianItemProps) {
 	const [open, setOpen] = useState(false);
 	return (
-		<div className="w-full bg-white px-5 py-8 border-b border-[#e9e6e3]">
-			<div className="flex items-center justify-start">
+		<div className="byu-w-full byu-bg-white byu-px-5 byu-py-8 byu-border-b byu-border-[#e9e6e3]">
+			<div className="byu-flex byu-items-center byu-justify-start">
 				<Plus
 					onClick={() => setOpen(!open)}
-					className={`cursor-pointer transition-transform duration-300 fill-navy ${
-						open ? '' : 'rotate-45'
+					className={`byu-cursor-pointer byu-transition-transform byu-duration-300 byu-fill-navy ${
+						open ? '' : 'byu-rotate-45'
 					}`}
 					height="15px"
 					width="15px"
 				/>
 				<div
 					onClick={() => setOpen(!open)}
-					className="ml-3 select-none font-bold text-base cursor-pointer"
+					className="byu-ml-3 byu-select-none byu-font-bold byu-text-base byu-cursor-pointer"
 				>
 					{title}
 				</div>
 			</div>
-			{open && <p className="pt-5 ml-8 font-light">{children}</p>}
+			{open && <p className="byu-pt-5 byu-ml-8 byu-font-light">{children}</p>}
 		</div>
 	);
 }

@@ -37,5 +37,7 @@ module.exports = {
 			}
 		},
 	},
+	prefix: "byu-",
+	important: true,
 	plugins: [],
 };

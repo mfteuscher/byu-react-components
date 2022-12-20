@@ -28,29 +28,29 @@
 	h1 {
 		font-size: 2.4em !important;
 		margin: 0 !important;
-		@apply font-bold;
+		@apply byu-font-bold;
 	}
 	h2 {
 		font-size: 2em;
-		@apply font-medium;
+		@apply byu-font-medium;
 	}
 	h3 {
-		@apply font-bold;
+		@apply byu-font-bold;
 		font-size: 1.3333em;
 	}
 	h4 {
-		@apply uppercase;
-		@apply font-bold;
+		@apply byu-uppercase;
+		@apply byu-font-bold;
 		font-size: 1.11111em;
 	}
 	h5 {
-		@apply text-base;
-		@apply font-medium;
+		@apply byu-text-base;
+		@apply byu-font-medium;
 	}
 	h6 {
-		@apply font-light;
-		@apply text-base;
-		@apply italic;
+		@apply byu-font-light;
+		@apply byu-text-base;
+		@apply byu-italic;
 	}
 }
 

@@ -7,7 +7,7 @@ interface FooterProps {
 }
 function Footer({ children }: FooterProps) {
   return (
-	<footer className="flex w-full flex-col bg-white ">
+	<footer className="byu-flex byu-w-full byu-flex-col byu-bg-white ">
 		{children && <FooterNav>{children}</FooterNav>}
 	  <UniversityFooter />
 	</footer>
@@ -19,14 +19,14 @@ interface FooterNavProps {
 }
 function FooterNav({ children }: FooterNavProps) {
   return (
-	<div className="mx-auto">
+	<div className="byu-mx-auto">
 	  <div
-		className={`flex max-w-screen-xl flex-col flex-wrap xl:w-[1000px] 2xl:w-[1280px] ${
+		className={`byu-flex byu-max-w-screen-xl byu-flex-col byu-flex-wrap xl:byu-w-[1000px] 2xl:byu-w-[1280px] ${
 		  // @ts-ignore
 		  children.props.children.length === 3
-			? "justify-between"
-			: "justify-around"
-		} p-5 sm:flex-row 2xl:gap-14`}
+			? "byu-justify-between"
+			: "byu-justify-around"
+		} byu-p-5 sm:byu-flex-row 2xl:byu-gap-14`}
 	  >
 		{children}
 	  </div>
@@ -36,25 +36,25 @@ function FooterNav({ children }: FooterNavProps) {
 
 function UniversityFooter() {
   return (
-	<div className="flex justify-center bg-navy px-5 py-4 text-white md:px-10">
-	  <div className="flex max-w-screen-lg grow flex-col items-center gap-4 md:gap-6 md:max-xl:flex-row">
-		<a className="flex-initial" href="https://www.byu.edu/">
-		  <BYUWordMark className="hidden xl:block" />
-		  <BYUWhiteLogo className="block w-20 md:w-24 xl:hidden" />
+	<div className="byu-flex byu-justify-center byu-bg-navy byu-px-5 byu-py-4 byu-text-white md:byu-px-10">
+	  <div className="byu-flex byu-max-w-screen-lg byu-grow byu-flex-col byu-items-center byu-gap-4 md:byu-gap-6 md:max-xl:byu-flex-row">
+		<a className="byu-flex-initial" href="https://www.byu.edu/">
+		  <BYUWordMark className="byu-hidden xl:byu-block" />
+		  <BYUWhiteLogo className="byu-block byu-w-20 md:byu-w-24 xl:byu-hidden" />
 		</a>
-		<div className="mx-auto flex-1 text-center">
-		  <div className="mb-1 text-[10px] sm:text-sm">
-			<span className="whitespace-nowrap">Provo, UT 84602, USA</span> |{" "}
-			<span className="whitespace-nowrap">801-422-4636</span> |{" "}
-			<span className="whitespace-nowrap">
+		<div className="byu-mx-auto byu-flex-1 byu-text-center">
+		  <div className="byu-mb-1 byu-text-[10px] sm:byu-text-sm">
+			<span className="byu-whitespace-nowrap">Provo, UT 84602, USA</span> |{" "}
+			<span className="byu-whitespace-nowrap">801-422-4636</span> |{" "}
+			<span className="byu-whitespace-nowrap">
 			  © {new Date().getFullYear()} All rights reserved
 			</span>
 		  </div>
-		  <div className="text-[10px] sm:text-sm">
+		  <div className="byu-text-[10px] sm:byu-text-sm">
 			<a
 			  rel="external"
 			  referrerPolicy="no-referrer"
-			  className="hover:underline"
+			  className="hover:byu-underline"
 			  target="_blank"
 			  href="http://www.byu.edu/privacy"
 			>
@@ -64,7 +64,7 @@ function UniversityFooter() {
 			<a
 			  rel="external"
 			  referrerPolicy="no-referrer"
-			  className="hover:underline"
+			  className="hover:byu-underline"
 			  target="_blank"
 			  href="https://www.byu.edu/cookie-preferences"
 			>

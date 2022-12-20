@@ -13,7 +13,7 @@ function LinkList({ children }: LinkListProps) {
     );
   });
   return (
-    <div className="mb-10 mr-10 flex flex-col gap-2 sm:max-lg:basis-1/3">
+    <div className="byu-mb-10 byu-mr-10 byu-flex byu-flex-col byu-gap-2 sm:max-lg:byu-basis-1/3">
       {subComponents.map(component => component)}
     </div>
   );
@@ -24,7 +24,7 @@ interface TitleProps {
 }
 function Title({ children }: TitleProps) {
   return (
-    <div className="mb-2 font-headings text-sm font-extrabold uppercase tracking-widest">
+    <div className="byu-mb-2 byu-font-headings byu-text-sm byu-font-extrabold byu-uppercase byu-tracking-widest">
       {children}
     </div>
   );
@@ -39,7 +39,7 @@ interface LinkProps {
   [propName: string]: any;
 }
 function Link({ onClick, href, className = "", children, ...props }: LinkProps) {
-  let classNames = "text-[#0057b8] cursor-pointer";
+  let classNames = "byu-text-[#0057b8] byu-cursor-pointer";
   if (onClick)
     return (
       <span {...props} className={classNames + className} onClick={onClick}>

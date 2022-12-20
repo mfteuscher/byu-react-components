@@ -12,19 +12,19 @@ function ContactInfo({ children }: { children: ReactNode}) {
 	const phone = getChildByName(children, "Phone");
 	const button = getChildByName(children, "Button");
 	return (
-		<div className="mb-10 mr-10 flex flex-col gap-1">
+		<div className="byu-mb-10 byu-mr-10 byu-flex byu-flex-col byu-gap-1">
 			{title}
 			{address}
 			{email}
 			{phone}
-			<div className="mt-4">{button}</div>
+			<div className="byu-mt-4">{button}</div>
 		</div>
 	);
 }
 
 function Title({ children }: { children: ReactNode}) {
 	return (
-		<div className="mb-3 font-headings text-sm font-extrabold uppercase tracking-widest">
+		<div className="byu-mb-3 byu-font-headings byu-text-sm byu-font-extrabold byu-uppercase byu-tracking-widest">
 			{children}
 		</div>
 	);

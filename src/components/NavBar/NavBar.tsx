@@ -21,15 +21,15 @@ interface AccountOptionsProps {
 
 function AccountOptions({ signInOptions, className = "" }: AccountOptionsProps) {
 	return (
-		<div className={`flex items-center font-headings text-base ${className}`}>
+		<div className={`byu-flex byu-items-center byu-font-headings byu-text-base ${className}`}>
 			{signInOptions.signedIn && <>{signInOptions.userName}</>}
-			<AccountIcon className="mx-2 h-5 w-5" />
+			<AccountIcon className="byu-mx-2 byu-h-5 byu-w-5" />
 			{signInOptions.signedIn ? (
-				<div className="cursor-pointer" onClick={signInOptions.signOut}>
+				<div className="byu-cursor-pointer" onClick={signInOptions.signOut}>
 					Sign Out
 				</div>
 			) : (
-				<div className="cursor-pointer" onClick={signInOptions.signIn}>
+				<div className="byu-cursor-pointer" onClick={signInOptions.signIn}>
 					Sign In
 				</div>
 			)}
@@ -49,7 +49,7 @@ function Link({ onClick, href, children, className, ...props }: LinkProps) {
 	if (onClick)
 		return (
 			<div
-				className={`cursor-pointer ${className}`}
+				className={`byu-cursor-pointer ${className}`}
 				onClick={onClick}
 				{...props}
 			>
@@ -101,33 +101,33 @@ export default function NavBar({
 		!!nav || !!button || !!executeSearch || !!signInOptions;
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	return (
-		<header className="header z-20 flex flex-col shadow-bottom">
-			<div className="flex items-center bg-navy p-3 font-headings">
+		<header className="byu-z-20 byu-flex byu-flex-col byu-shadow-bottom">
+			<div className="byu-flex byu-items-center byu-bg-navy byu-p-3 byu-font-headings">
 				{/* BYU Logo */}
 				<div
 					id="byu-logo-div"
-					className="flex h-full flex-initial items-center"
+					className="byu-flex byu-h-full byu-flex-initial byu-items-center"
 				>
 					<a href="https://www.byu.edu/">
 						<BYUWhiteLogo width="100px"/>
 					</a>
 				</div>
 				{/* Blue Line Divider */}
-				<div className="clear-both mr-3 h-12 w-1 flex-initial border-l border-solid border-l-divider" />
+				<div className="byu-clear-both byu-mr-3 byu-h-12 byu-w-1 byu-flex-initial byu-border-l byu-border-solid byu-border-l-divider" />
 				{/* Title, Subtitle, and Breacrumbs */}
-				<div id="titles-and-breadcrumbs" className="flex-intial mr-auto">
-					<div className="w-fit">
+				<div id="titles-and-breadcrumbs" className="byu-flex-intial byu-mr-auto">
+					<div className="byu-w-fit">
 						{/* Breadcrumbs */}
 						{breadcrumbs && breadcrumbs.length !== 0 && (
-							<div className="flex flex-wrap items-center divide-x divide-divider ">
+							<div className="byu-flex byu-flex-wrap byu-items-center byu-divide-x byu-divide-divider ">
 								{breadcrumbs.map(({ text, href, onClick }, idx) => (
 									<Link
 										key={`${text}-${idx}`}
 										onClick={onClick}
 										href={href}
 										className={`${
-											idx === 0 ? "pr-2" : "px-2"
-										} text-xs text-white opacity-75 transition-opacity duration-200 ease-out hover:opacity-100 hover:ease-in md:text-sm`}
+											idx === 0 ? "byu-pr-2" : "byu-px-2"
+										} byu-text-xs byu-text-white byu-opacity-75 byu-transition-opacity byu-duration-200 byu-ease-out hover:byu-opacity-100 hover:byu-ease-in md:byu-text-sm`}
 									>
 										{text}
 									</Link>
@@ -137,7 +137,7 @@ export default function NavBar({
 						{/* Title */}
 						{title && (
 							<Link
-								className="text-lg text-white md:text-xl lg:text-2xl"
+								className="byu-text-lg byu-text-white md:byu-text-xl lg:byu-text-2xl"
 								onClick={title.onClick}
 								href={title.href}
 							>
@@ -147,7 +147,7 @@ export default function NavBar({
 						{/* Subtitle */}
 						{subtitle && (
 							<Link
-								className="text-sm text-white md:text-base"
+								className="byu-text-sm byu-text-white md:byu-text-base"
 								onClick={subtitle.onClick}
 								href={subtitle.href}
 							>
@@ -158,7 +158,7 @@ export default function NavBar({
 				</div>
 				{/* Button - Desktop */}
 				{button && (
-					<div className="hidden flex-initial md:block">
+					<div className="byu-hidden byu-flex-initial md:byu-block">
 						<Button isStatic onClick={button.onClick}>
 							{button.text}
 						</Button>
@@ -168,7 +168,7 @@ export default function NavBar({
 				{signInOptions && (
 					<AccountOptions
 						signInOptions={signInOptions}
-						className="mx-3 hidden text-white md:flex"
+						className="byu-mx-3  byu-hidden byu-text-white md:byu-flex"
 					/>
 				)}
 				{/* Search Bar - Desktop */}
@@ -180,15 +180,15 @@ export default function NavBar({
 						};
 						const query = target.query.value;
 						executeSearch(query);
-					}} className="relative hidden flex-initial flex-row items-center md:flex">
+					}} className="byu-relative byu-hidden byu-flex-initial byu-flex-row byu-items-center md:byu-flex">
 						<input
 							name="query"
 							placeholder="Search"
-							className="h-9 w-36 rounded-full px-3 pr-8"
+							className="byu-h-9 byu-w-36 byu-rounded-full byu-px-3 byu-pr-8"
 							type="text"
 						/>
-						<button type="submit" className="absolute right-1 m-1">
-							<MagnifyingGlass className="h-5 w-5 fill-navy" />
+						<button type="submit" className="byu-absolute byu-right-1 byu-m-1">
+							<MagnifyingGlass className="byu-h-5 byu-w-5 byu-fill-navy" />
 						</button>
 					</form>
 				)}
@@ -197,13 +197,13 @@ export default function NavBar({
 				{dropdownMenuExists && (
 					<button
 						onClick={() => setDropdownOpen(!dropdownOpen)}
-						className={`h-8 w-8 flex-none origin-center transition duration-200 ease-in-out hover:scale-110 md:hidden ${
-							dropdownOpen ? "bg-[#0057b8]" : "hover:bg-[#004286]"
+						className={`byu-h-8 byu-w-8 byu-flex-none byu-origin-center byu-transition byu-duration-200 byu-ease-in-out hover:byu-scale-110 md:byu-hidden ${
+							dropdownOpen ? "byu-bg-[#0057b8]" : "hover:byu-bg-[#004286]"
 						}`}
 					>
 						<div
-							className={`h-8 w-8 transition-transform duration-150 active:rotate-90 ${
-								dropdownOpen ? "rotate-90 " : ""
+							className={`byu-h-8 byu-w-8 byu-transition-transform byu-duration-150 active:byu-rotate-90 ${
+								dropdownOpen ? "byu-rotate-90 " : ""
 							}`}
 							style={{
 								backgroundImage: `url('${dropdownOpen ? CloseX : ThreeLines}')`,
@@ -214,14 +214,14 @@ export default function NavBar({
 			</div>
 			{/* Navigation - Desktop */}
 			{nav && nav.length != 0 && (
-				<nav className="hidden h-[50px] w-full border-b border-[#ddd] bg-white pl-28 font-normal text-navy md:flex">
+				<nav className="byu-hidden byu-h-[50px] byu-w-full byu-border-b byu-border-[#ddd] byu-bg-white byu-pl-28 byu-font-normal byu-text-navy md:byu-flex">
 					{nav.map(({ text, href, onClick }, idx) => (
 						<Link
 							key={`${text}-${idx}`}
 							href={href}
 							onClick={onClick}
-							className={`py-auto mr-0.5 flex h-full items-center justify-center border-b-[3px] px-[22px] hover:border-b-navy hover:bg-[#fafafa] ${
-								text === active ? "border-b-navy" : "border-b-transparent"
+							className={`byu-py-auto byu-mr-0.5 byu-flex byu-h-full byu-items-center byu-justify-center byu-border-b-[3px] byu-px-[22px] hover:byu-border-b-navy hover:byu-bg-[#fafafa] ${
+								text === active ? "byu-border-b-navy" : "byu-border-b-transparent"
 							}`}
 						>
 							{text}
@@ -231,7 +231,7 @@ export default function NavBar({
 			)}
 			{/* Dropdown Menu */}
 			{dropdownMenuExists && dropdownOpen && (
-				<div className="h-15 flex w-full flex-col bg-white">
+				<div className="byu-h-15 byu-flex byu-w-full byu-flex-col byu-bg-white">
 					{/* Search Bar - Mobile */}
 					{executeSearch && (
 						<form onSubmit={e => {
@@ -241,22 +241,22 @@ export default function NavBar({
 							};
 							const query = target.query.value;
 							executeSearch(query);
-						}} className="relative flex flex-row flex-nowrap items-center">
+						}} className="byu-relative byu-flex byu-flex-row byu-flex-nowrap byu-items-center">
 							<input
 								name="query"
 								placeholder="Search"
-								className="flex-auto py-3 px-4 shadow-[0_5px_6px_-7px_rgba(0,0,0,0.3)] outline-2 focus:outline focus-visible:outline-[#0066f481]"
+								className="byu-flex-auto byu-py-3 byu-px-4 byu-shadow-[0_5px_6px_-7px_rgba(0,0,0,0.3)] byu-outline-2 focus:byu-outline focus-visible:byu-outline-[#0066f481]"
 							/>
-							<button type="submit" className="absolute right-1 m-1 flex-none">
-								<MagnifyingGlass className="h-5 w-5 fill-navy" />
+							<button type="submit" className="byu-absolute byu-right-1 byu-m-1 byu-flex-none">
+								<MagnifyingGlass className="byu-h-5 byu-w-5 byu-fill-navy" />
 							</button>
 						</form>
 					)}
 					{/* Button and User - Mobile */}
 					{(button || signInOptions) && (
 						<div
-							className={`flex w-full px-4 py-3 ${
-								!!button && !!signInOptions ? "justify-between" : "justify-end"
+							className={`byu-flex byu-w-full byu-px-4 byu-py-3 ${
+								!!button && !!signInOptions ? "byu-justify-between" : "byu-justify-end"
 							}`}
 						>
 							{button && (
@@ -267,7 +267,7 @@ export default function NavBar({
 							{signInOptions && (
 								<AccountOptions
 									signInOptions={signInOptions}
-									className="text-navy"
+									className="byu-text-navy"
 								/>
 							)}
 						</div>
@@ -280,8 +280,8 @@ export default function NavBar({
 									key={`${text}-${idx}`}
 									href={href}
 									onClick={onClick}
-									className={`w-full border-l-[3px] px-[22px] py-[11px] hover:border-l-navy hover:bg-[#fafafa] ${
-										text === active ? "border-l-navy" : "border-l-transparent"
+									className={`byu-w-full byu-border-l-[3px] byu-px-[22px] byu-py-[11px] hover:byu-border-l-navy hover:byu-bg-[#fafafa] ${
+										text === active ? "byu-border-l-navy" : "byu-border-l-transparent"
 									}`}
 								>
 									{text}

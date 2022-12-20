@@ -21,21 +21,21 @@ export default function Button({
 }: ButtonProps) {
 	const getStyles = () => {
 		let styles = '';
-		if (isStatic) styles = styles + 'hover:bg-[#1a66b7] py-1';
+		if (isStatic) styles = styles + 'hover:byu-bg-[#1a66b7] byu-py-1';
 		else
-			styles = styles + 'transition-all duration-300 hover:scale-[1.15] py-3';
+			styles = styles + 'byu-transition-all byu-duration-300 hover:byu-scale-[1.15] byu-py-3';
 		if (variant === 'primary')
-			styles = styles + ' bg-btn-primary text-white border-btn-primary';
+			styles = styles + ' byu-bg-btn-primary byu-text-white byu-border-btn-primary';
 		else if (variant === 'secondary')
-			styles = styles + ' bg-navy text-white border-navy';
+			styles = styles + ' byu-bg-navy byu-text-white byu-border-navy';
 		else if (variant === 'white')
-			styles = styles + ' bg-white text-btn-primary border-gray';
+			styles = styles + ' byu-bg-white byu-text-btn-primary byu-border-gray';
 		return styles;
 	};
 
 	return (
 		<button
-			className={`${getStyles()} ${className} rounded border border-solid px-5 font-semibold`}
+			className={`${getStyles()} ${className} byu-rounded byu-border byu-border-solid byu-px-5 byu-font-semibold`}
 			type={type}
 			onClick={onClick}
 		>
