@@ -25,11 +25,11 @@ export default function Button({
 		else
 			styles = styles + 'byu-transition-all byu-duration-300 hover:byu-scale-[1.15] byu-py-3';
 		if (variant === 'primary')
-			styles = styles + ' byu-bg-btn-primary byu-text-white byu-border-btn-primary';
+			styles = styles + ' !byu-bg-btn-primary byu-text-white byu-border-btn-primary';
 		else if (variant === 'secondary')
-			styles = styles + ' byu-bg-navy byu-text-white byu-border-navy';
+			styles = styles + ' !byu-bg-navy byu-text-white byu-border-navy';
 		else if (variant === 'white')
-			styles = styles + ' byu-bg-white byu-text-btn-primary byu-border-gray';
+			styles = styles + ' !byu-bg-white byu-text-btn-primary byu-border-gray';
 		return styles;
 	};
 
